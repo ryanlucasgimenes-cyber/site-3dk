@@ -1,0 +1,21 @@
+{
+  "name": "3dk-impressoes",
+  "version": "1.0.0",
+  "description": "Site institucional da 3Dk Impressões - impressão 3D personalizada",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "impressao-3d",
+    "3dk",
+    "express"
+  ],
+  "author": "3Dk Impressões",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
