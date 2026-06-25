@@ -1,47 +1,32 @@
-# 3Dk Impressões — Site institucional
+# 3Dk Impressões — Site
 
-Site profissional para a **3Dk Impressões** (impressão 3D personalizada), com
-front-end responsivo e back-end em Node.js/Express.
+Site institucional da **3Dk Impressões** (impressão 3D personalizada).
+Site **estático** (HTML/CSS/JS), com formulário que envia os pedidos
+direto para o **WhatsApp**.
 
 ## Estrutura
 
 ```
 Dreeku/
-├── server.js              # Back-end Express (API + serve o site)
-├── package.json
-├── public/                # Front-end
+├── public/                # O site (é isto que vai para o ar)
 │   ├── index.html
 │   ├── css/styles.css
-│   └── js/main.js
-└── data/
-    └── orcamentos.json    # Pedidos de orçamento salvos (criado em runtime)
+│   └── js/main.js         # serviços + número do WhatsApp ficam no topo
+├── server.js              # servidor LOCAL opcional (para testar)
+└── PUBLICAR.md            # passo a passo para publicar e atualizar
 ```
 
-## Como rodar
+## Rodar localmente
 
 ```bash
-npm install      # só na primeira vez
-npm start        # http://localhost:3000
+npm install   # só na primeira vez
+npm start     # http://localhost:3000
 ```
 
-Para desenvolvimento com reload automático:
+(ou abra `public/index.html` direto no navegador)
 
-```bash
-npm run dev
-```
+## Publicar / atualizar
 
-## API
-
-| Método | Rota               | Descrição                                        |
-|--------|--------------------|--------------------------------------------------|
-| GET    | `/api/servicos`    | Lista os serviços (o front monta os cards)       |
-| POST   | `/api/orcamento`   | Recebe e valida um pedido de orçamento           |
-| GET    | `/api/orcamentos`  | Lista os pedidos recebidos (uso administrativo)  |
-
-Os pedidos são validados no servidor e gravados em `data/orcamentos.json`.
-
-## Próximos passos sugeridos
-
-- Trocar o número do WhatsApp e os contatos (estão como placeholder).
-- Enviar os orçamentos por e-mail (ex.: Nodemailer) ou integrar a um banco de dados.
-- Adicionar uma galeria de fotos das peças reais.
+Veja o guia completo em **[PUBLICAR.md](PUBLICAR.md)**.
+Resumo: código no GitHub → hospedado no Render (site estático grátis) →
+atualizar é só `git push`.

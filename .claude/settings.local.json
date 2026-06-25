@@ -4,7 +4,9 @@
       "Bash(npm --version)",
       "Bash(npm install *)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(taskkill //F //PID 33132)"
+      "Bash(taskkill //F //PID 33132)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=\"3Dk\" -c user.email=\"contato@3dk.com\" commit -qm \"Formulário envia para WhatsApp; site estático; guia de publicação\")"
     ]
   }
 }
