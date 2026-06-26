@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://threedk-2dt7.onrender.com/sitemap.xml
